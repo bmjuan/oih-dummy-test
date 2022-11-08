@@ -1,0 +1,35 @@
+{
+  "title": "OIH Connector Test Hackweek",
+  "description": "OIH connector test hackweek NewWork Nov 2022",
+  "docsUrl": "https://github.com/openintegrationhub/contacts-adapter-template",
+  "buildType": "docker",
+  "credentials": {
+    "fields": {
+      "apiKey": {
+        "label": "Your APIKEY",
+        "required": true,
+        "viewClass": "TextFieldView",
+        "note": "your Api Key",
+        "placeholder": "your api key"
+      }
+    }
+  },
+  "triggers": {
+    "getObjectsPolling": {
+      "title": "Fetch new and updated objects",
+      "main": "./lib/triggers/getObjects.js",
+      "metadata": {
+        "out": {}
+      }
+    }
+  },
+  "actions": {
+    "upsertObject": {
+      "title": "Upsert an object in your target application",
+      "main": "./lib/actions/upsertObject.js",
+      "metadata": {
+        "in": {}
+      }
+    }
+  }
+}

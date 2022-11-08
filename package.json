@@ -1,0 +1,39 @@
+{
+  "name": "oih-connector-test-hackweek",
+  "version": "1.0.0",
+  "description": "OIH connector test hackweek",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "adapter",
+    "oih"
+  ],
+  "scripts": {
+    "start": "node ./node_modules/@openintegrationhub/ferryman/runGlobal.js",
+    "pretest": "eslint lib test --ext .js --ext .json --fix",
+    "test": "NODE_ENV=test mocha test/* --timeout 10000",
+    "test-watch": "nodemon --exec \"npm test \""
+  },
+  "engines": {
+    "node": "16.15.0",
+    "npm": ">=8.19"
+  },
+  "dependencies": {
+    "@openintegrationhub/ferryman": "^1.5.5",
+    "dotenv": "^8.2.0",
+    "request": "2.88.0",
+    "request-promise": "4.1.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-json": "^1.2.1",
+    "eslint-plugin-mocha": "^5.2.0",
+    "mocha": "^10.1.0",
+    "nock": "^9.6.1"
+  },
+  "license": "Apache 2.0"
+}

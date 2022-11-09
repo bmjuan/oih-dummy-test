@@ -17,19 +17,17 @@
   "triggers": {
     "getObjectsPolling": {
       "title": "Fetch new and updated objects",
-      "main": "./lib/triggers/getObjects.js",
-      "metadata": {
-        "out": {}
-      }
+      "main": "./lib/triggers/getObjects.js"
     }
   },
   "actions": {
     "upsertObject": {
       "title": "Upsert an object in your target application",
-      "main": "./lib/actions/upsertObject.js",
-      "metadata": {
-        "in": {}
-      }
+      "main": "./lib/actions/upsertObject.js"
+    },
+    "emitError": {
+      "title": "Emits an error es event",
+      "main": "./lib/actions/emitError.js"
     }
   }
 }

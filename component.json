@@ -1,7 +1,7 @@
 {
   "title": "OIH Connector Test Hackweek",
   "description": "OIH connector test hackweek NewWork Nov 2022",
-  "docsUrl": "https://github.com/openintegrationhub/contacts-adapter-template",
+  "docsUrl": "https://github.com/bmjuan/oih-dummy-test",
   "buildType": "docker",
   "credentials": {
     "fields": {
@@ -15,15 +15,15 @@
     }
   },
   "triggers": {
-    "getObjectsPolling": {
+    "saveInSnapshotAndPass": {
       "title": "Fetch new and updated objects",
-      "main": "./lib/triggers/getObjects.js"
+      "main": "./lib/triggers/saveInSnapshotAndPass.js"
     }
   },
   "actions": {
-    "upsertObject": {
-      "title": "Upsert an object in your target application",
-      "main": "./lib/actions/upsertObject.js"
+    "sendToNext": {
+      "title": "Receives data and sends it to the next step adding one field as timestamp",
+      "main": "./lib/actions/sendToNext.js"
     },
     "emitError": {
       "title": "Emits an error es event",

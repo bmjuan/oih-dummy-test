@@ -18,12 +18,20 @@
     "saveInSnapshotAndPass": {
       "title": "Fetch new and updated objects",
       "main": "./lib/triggers/saveInSnapshotAndPass.js"
+    },
+    "startAuth": {
+      "title": "Starts an Auth proccess against SKM",
+      "main": "./lib/triggers/startAuth.js"
     }
   },
   "actions": {
     "sendToNext": {
       "title": "Receives data and sends it to the next step adding one field as timestamp",
       "main": "./lib/actions/sendToNext.js"
+    },
+    "sendToFront": {
+      "title": "Sends Data emitted to the front",
+      "main": "./lib/actions/sendToFront.js"
     },
     "emitError": {
       "title": "Emits an error es event",
